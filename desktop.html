@@ -32,8 +32,25 @@
             text-decoration: none;
         }
 
-        .version-badge:hover {
-            background: #00b8d4;
+        .desktop-view-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: #00d9ff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 101;
+        }
+
+        .desktop-view-btn:active {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-view-btn {
+                display: none;
+            }
         }
 
         header {
@@ -1454,6 +1471,7 @@
         <nav class="container">
             <div class="logo">VelociFlow</div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="desktop-view-btn" onclick="goToMobile()" title="Mobile Version">📱</button>
             <ul id="navMenu">
                 <li><a href="#platform">Platform</a></li>
                 <li><a href="#demo">Demo</a></li>
@@ -2017,6 +2035,15 @@
                 navMenu.classList.remove('active');
             }
         });
+
+        // Navigation functions
+        function goToMobile() {
+            window.location.href = '/index.html';
+        }
+
+        function goToDesktop() {
+            window.location.href = '/desktop.html';
+        }
     </script>
 </body>
 </html>
