@@ -64,13 +64,7 @@
             font-size: 1.3rem;
             font-weight: 700;
             letter-spacing: -0.3px;
-            display: none;
-        }
-
-        @media (min-width: 600px) {
-            .logo-text {
-                display: inline;
-            }
+            display: inline;
         }
 
         nav ul {
@@ -973,21 +967,24 @@
             nav {
                 justify-content: space-between;
                 align-items: center;
-                gap: 1rem;
-                padding: 0.8rem 0;
+                gap: 0.5rem;
+                padding: 0.7rem 0;
+                flex-wrap: nowrap;
             }
 
             .logo-section {
-                gap: 0.5rem;
+                gap: 0.4rem;
+                min-width: 0;
             }
 
             .logo-icon {
-                width: 28px;
-                height: 28px;
+                width: 24px;
+                height: 24px;
             }
 
             .logo-text {
-                font-size: 1.1rem;
+                font-size: 0.95rem;
+                white-space: nowrap;
             }
 
             nav ul {
@@ -1013,11 +1010,15 @@
 
             .menu-toggle {
                 display: block;
+                padding: 0.4rem;
+                margin: 0 -0.4rem;
             }
 
             .cta-button {
-                padding: 0.5rem 1.2rem;
-                font-size: 0.8rem;
+                padding: 0.45rem 0.9rem;
+                font-size: 0.75rem;
+                min-width: auto;
+                max-width: 120px;
             }
 
             .logo {
