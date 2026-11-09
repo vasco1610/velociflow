@@ -63,6 +63,15 @@
             color: #00d9ff;
         }
 
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         .cta-button {
             background: #00d9ff;
             color: #0f1419;
@@ -700,6 +709,267 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #0f1419;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                border-bottom: 1px solid #1a2332;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 0.75rem 2rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button, .secondary-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .features-grid {
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .problem-solution-pair {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .dashboard-mockup {
+                padding: 1rem;
+                margin: 2rem 0;
+            }
+
+            .mockup-container {
+                overflow-x: auto;
+            }
+
+            .mockup-content {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .mockup-sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 1rem;
+            }
+
+            .mockup-nav-items {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .dashboard-container {
+                padding: 1rem;
+            }
+
+            .kpi-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .kpi-card {
+                padding: 1.2rem;
+            }
+
+            .kpi-label {
+                font-size: 0.75rem;
+            }
+
+            .kpi-value {
+                font-size: 1.5rem;
+            }
+
+            .table-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .data-table {
+                font-size: 0.75rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 0.6rem 0.5rem;
+            }
+
+            .performance-section {
+                padding: 1rem;
+            }
+
+            .chart-row {
+                gap: 0.5rem;
+            }
+
+            .chart-label {
+                width: 35px;
+                font-size: 0.7rem;
+            }
+
+            .chart-bar-lg {
+                min-width: 40px;
+            }
+
+            .roi-section {
+                padding: 2rem 1rem;
+                margin: 2rem 0;
+            }
+
+            .roi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .roi-item {
+                padding: 1.5rem;
+            }
+
+            .roi-value {
+                font-size: 1.8rem;
+            }
+
+            .roi-label {
+                font-size: 0.85rem;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .secondary-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.3rem;
+            }
+
+            .feature-card {
+                padding: 1.2rem;
+            }
+
+            .feature-icon {
+                font-size: 2rem;
+            }
+
+            .data-table {
+                font-size: 0.7rem;
+            }
+
+            .roi-value {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
             .dashboard-container {
                 padding: 1rem;
             }
@@ -1162,7 +1432,8 @@
     <header>
         <nav class="container">
             <div class="logo">VelociFlow</div>
-            <ul>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
                 <li><a href="#platform">Platform</a></li>
                 <li><a href="#demo">Demo</a></li>
                 <li><a href="#why">Why Us</a></li>
@@ -1701,7 +1972,29 @@
                         block: 'start'
                     });
                 }
+                // Close mobile menu when link clicked
+                const navMenu = document.getElementById('navMenu');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
             });
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (!nav.contains(event.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 </body>
