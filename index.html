@@ -526,11 +526,11 @@
         }
 
         .mobile-route-card {
-            padding: 1rem;
+            padding: 0.9rem;
             border-bottom: 1px solid #e0e0e0;
             display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            gap: 0.8rem;
+            align-items: stretch;
         }
 
         .mobile-route-card:last-child {
@@ -539,45 +539,63 @@
 
         .mobile-route-indicator {
             width: 3px;
-            height: 60px;
             background: #00d9ff;
             border-radius: 2px;
             flex-shrink: 0;
-            margin-top: 2px;
         }
 
         .mobile-route-info {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 0.4rem;
+            gap: 0.25rem;
+            min-width: 0;
+        }
+
+        .mobile-route-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .mobile-route-id {
             font-weight: 700;
             color: #0f1419;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         .mobile-route-driver {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #666;
+            white-space: nowrap;
+        }
+
+        .mobile-route-meta {
+            font-size: 0.7rem;
+            color: #999;
+            display: flex;
+            gap: 0.3rem;
+            align-items: center;
         }
 
         .mobile-route-progress {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #999;
             display: flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
             align-items: center;
+            margin-top: 0.2rem;
         }
 
         .mobile-progress-mini {
             flex: 1;
-            height: 4px;
+            height: 3px;
             background: #e0e0e0;
             border-radius: 2px;
             overflow: hidden;
+            min-width: 40px;
         }
 
         .mobile-progress-fill {
@@ -588,23 +606,32 @@
 
         .mobile-route-status {
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            font-size: 0.75rem;
+            flex-direction: column;
+            gap: 0.3rem;
+            align-items: flex-end;
+            font-size: 0.7rem;
             font-weight: 600;
+            flex-shrink: 0;
+            text-align: right;
         }
 
         .mobile-status-badge {
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
             background: #f0f7f4;
             color: #22863a;
             white-space: nowrap;
+            font-size: 0.65rem;
         }
 
         .mobile-status-badge.delayed {
             background: #fef5e7;
             color: #f39c12;
+        }
+
+        .mobile-route-time {
+            color: #0f1419;
+            font-weight: 600;
         }
 
         .mockup-content {
@@ -2028,8 +2055,13 @@
                         <div class="mobile-route-card">
                             <div class="mobile-route-indicator"></div>
                             <div class="mobile-route-info">
-                                <div class="mobile-route-id">RT-00482</div>
-                                <div class="mobile-route-driver">J. Mueller • 12 stops</div>
+                                <div class="mobile-route-header">
+                                    <div class="mobile-route-id">RT-00482</div>
+                                    <div class="mobile-route-driver">J. Mueller</div>
+                                </div>
+                                <div class="mobile-route-meta">
+                                    <span>12 stops</span>
+                                </div>
                                 <div class="mobile-route-progress">
                                     <div class="mobile-progress-mini">
                                         <div class="mobile-progress-fill" style="width: 78%;"></div>
@@ -2038,16 +2070,21 @@
                                 </div>
                             </div>
                             <div class="mobile-route-status">
+                                <span class="mobile-route-time">16:45</span>
                                 <span class="mobile-status-badge">On Time</span>
-                                <span>16:45</span>
                             </div>
                         </div>
 
                         <div class="mobile-route-card">
                             <div class="mobile-route-indicator"></div>
                             <div class="mobile-route-info">
-                                <div class="mobile-route-id">RT-00511</div>
-                                <div class="mobile-route-driver">K. Schmidt • 8 stops</div>
+                                <div class="mobile-route-header">
+                                    <div class="mobile-route-id">RT-00511</div>
+                                    <div class="mobile-route-driver">K. Schmidt</div>
+                                </div>
+                                <div class="mobile-route-meta">
+                                    <span>8 stops</span>
+                                </div>
                                 <div class="mobile-route-progress">
                                     <div class="mobile-progress-mini">
                                         <div class="mobile-progress-fill" style="width: 45%;"></div>
@@ -2056,16 +2093,21 @@
                                 </div>
                             </div>
                             <div class="mobile-route-status">
+                                <span class="mobile-route-time">17:30</span>
                                 <span class="mobile-status-badge">On Time</span>
-                                <span>17:30</span>
                             </div>
                         </div>
 
                         <div class="mobile-route-card">
                             <div class="mobile-route-indicator"></div>
                             <div class="mobile-route-info">
-                                <div class="mobile-route-id">RT-00503</div>
-                                <div class="mobile-route-driver">M. Fischer • 15 stops</div>
+                                <div class="mobile-route-header">
+                                    <div class="mobile-route-id">RT-00503</div>
+                                    <div class="mobile-route-driver">M. Fischer</div>
+                                </div>
+                                <div class="mobile-route-meta">
+                                    <span>15 stops</span>
+                                </div>
                                 <div class="mobile-route-progress">
                                     <div class="mobile-progress-mini">
                                         <div class="mobile-progress-fill" style="width: 92%;"></div>
@@ -2074,16 +2116,21 @@
                                 </div>
                             </div>
                             <div class="mobile-route-status">
+                                <span class="mobile-route-time">16:20</span>
                                 <span class="mobile-status-badge">On Time</span>
-                                <span>16:20</span>
                             </div>
                         </div>
 
                         <div class="mobile-route-card">
                             <div class="mobile-route-indicator"></div>
                             <div class="mobile-route-info">
-                                <div class="mobile-route-id">RT-00495</div>
-                                <div class="mobile-route-driver">T. Wagner • 10 stops</div>
+                                <div class="mobile-route-header">
+                                    <div class="mobile-route-id">RT-00495</div>
+                                    <div class="mobile-route-driver">T. Wagner</div>
+                                </div>
+                                <div class="mobile-route-meta">
+                                    <span>10 stops</span>
+                                </div>
                                 <div class="mobile-route-progress">
                                     <div class="mobile-progress-mini">
                                         <div class="mobile-progress-fill" style="width: 61%;"></div>
@@ -2092,8 +2139,8 @@
                                 </div>
                             </div>
                             <div class="mobile-route-status">
+                                <span class="mobile-route-time">18:00</span>
                                 <span class="mobile-status-badge delayed">Optimizing</span>
-                                <span>18:00</span>
                             </div>
                         </div>
                     </div>
