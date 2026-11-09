@@ -408,6 +408,205 @@
             opacity: 0.9;
         }
 
+        /* Mobile Dashboard Specific */
+        .desktop-dashboard {
+            display: block;
+        }
+
+        .mobile-dashboard {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-dashboard {
+                display: none;
+            }
+
+            .mobile-dashboard {
+                display: block;
+            }
+        }
+
+        /* Mobile Dashboard Styles */
+        .mobile-dashboard {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .mobile-dashboard h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #0f1419;
+            font-size: 1.3rem;
+        }
+
+        .mobile-dashboard-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-stat-card {
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            color: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-stat-card.accent1 {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0f1419;
+        }
+
+        .mobile-stat-card.accent2 {
+            background: linear-gradient(135deg, #22863a 0%, #1a5c2a 100%);
+            color: white;
+        }
+
+        .mobile-stat-card.accent3 {
+            background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+            color: white;
+        }
+
+        .mobile-stat-card.accent4 {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+
+        .mobile-stat-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .mobile-stat-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .mobile-stat-change {
+            font-size: 0.75rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .mobile-stat-icon {
+            font-size: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .mobile-routes-section {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .mobile-routes-header {
+            background: #0f1419;
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .mobile-route-card {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .mobile-route-card:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-route-indicator {
+            width: 3px;
+            height: 60px;
+            background: #00d9ff;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .mobile-route-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .mobile-route-id {
+            font-weight: 700;
+            color: #0f1419;
+            font-size: 0.95rem;
+        }
+
+        .mobile-route-driver {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .mobile-route-progress {
+            font-size: 0.75rem;
+            color: #999;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .mobile-progress-mini {
+            flex: 1;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .mobile-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d9ff, #0099cc);
+            transition: width 0.3s;
+        }
+
+        .mobile-route-status {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            background: #f0f7f4;
+            color: #22863a;
+            white-space: nowrap;
+        }
+
+        .mobile-status-badge.delayed {
+            background: #fef5e7;
+            color: #f39c12;
+        }
+
         .mockup-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -1617,7 +1816,7 @@
             </div>
 
             <!-- Dashboard Mockup -->
-            <div class="dashboard-mockup">
+            <div class="dashboard-mockup desktop-dashboard">
                 <h3>VelociFlow Dashboard Example</h3>
                 <div class="mockup-container">
                     <div class="mockup-header">
@@ -1775,6 +1974,126 @@
                                     </div>
                                 </div>
                                 <div class="chart-footer-text">Mon &nbsp;&nbsp;&nbsp;&nbsp;Tue &nbsp;&nbsp;&nbsp;&nbsp;Wed &nbsp;&nbsp;&nbsp;&nbsp;Thu &nbsp;&nbsp;&nbsp;&nbsp;Fri &nbsp;&nbsp;&nbsp;&nbsp;Sat &nbsp;&nbsp;&nbsp;&nbsp;Sun</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Dashboard - Phone Optimized -->
+            <div class="mobile-dashboard">
+                <h3>📊 Live Operations</h3>
+                <div class="mobile-dashboard-content">
+                    <!-- Key Metrics Cards -->
+                    <div class="mobile-stat-card accent1">
+                        <div class="mobile-stat-left">
+                            <div class="mobile-stat-label">Active Routes</div>
+                            <div class="mobile-stat-value">487</div>
+                            <div class="mobile-stat-change">↑ 14% this week</div>
+                        </div>
+                        <div class="mobile-stat-icon">🚗</div>
+                    </div>
+
+                    <div class="mobile-stat-card accent2">
+                        <div class="mobile-stat-left">
+                            <div class="mobile-stat-label">On-Time Rate</div>
+                            <div class="mobile-stat-value">94.8%</div>
+                            <div class="mobile-stat-change">↑ 8.2% vs last month</div>
+                        </div>
+                        <div class="mobile-stat-icon">✅</div>
+                    </div>
+
+                    <div class="mobile-stat-card accent3">
+                        <div class="mobile-stat-left">
+                            <div class="mobile-stat-label">Fuel Savings</div>
+                            <div class="mobile-stat-value">$42.5K</div>
+                            <div class="mobile-stat-change">↑ 31% YoY</div>
+                        </div>
+                        <div class="mobile-stat-icon">⛽</div>
+                    </div>
+
+                    <div class="mobile-stat-card accent4">
+                        <div class="mobile-stat-left">
+                            <div class="mobile-stat-label">Avg Delivery Time</div>
+                            <div class="mobile-stat-value">2.3h</div>
+                            <div class="mobile-stat-change">↓ 28% vs baseline</div>
+                        </div>
+                        <div class="mobile-stat-icon">⏱️</div>
+                    </div>
+
+                    <!-- Active Routes -->
+                    <div class="mobile-routes-section">
+                        <div class="mobile-routes-header">🗺️ Active Routes (4)</div>
+                        
+                        <div class="mobile-route-card">
+                            <div class="mobile-route-indicator"></div>
+                            <div class="mobile-route-info">
+                                <div class="mobile-route-id">RT-00482</div>
+                                <div class="mobile-route-driver">J. Mueller • 12 stops</div>
+                                <div class="mobile-route-progress">
+                                    <div class="mobile-progress-mini">
+                                        <div class="mobile-progress-fill" style="width: 78%;"></div>
+                                    </div>
+                                    <span>78%</span>
+                                </div>
+                            </div>
+                            <div class="mobile-route-status">
+                                <span class="mobile-status-badge">On Time</span>
+                                <span>16:45</span>
+                            </div>
+                        </div>
+
+                        <div class="mobile-route-card">
+                            <div class="mobile-route-indicator"></div>
+                            <div class="mobile-route-info">
+                                <div class="mobile-route-id">RT-00511</div>
+                                <div class="mobile-route-driver">K. Schmidt • 8 stops</div>
+                                <div class="mobile-route-progress">
+                                    <div class="mobile-progress-mini">
+                                        <div class="mobile-progress-fill" style="width: 45%;"></div>
+                                    </div>
+                                    <span>45%</span>
+                                </div>
+                            </div>
+                            <div class="mobile-route-status">
+                                <span class="mobile-status-badge">On Time</span>
+                                <span>17:30</span>
+                            </div>
+                        </div>
+
+                        <div class="mobile-route-card">
+                            <div class="mobile-route-indicator"></div>
+                            <div class="mobile-route-info">
+                                <div class="mobile-route-id">RT-00503</div>
+                                <div class="mobile-route-driver">M. Fischer • 15 stops</div>
+                                <div class="mobile-route-progress">
+                                    <div class="mobile-progress-mini">
+                                        <div class="mobile-progress-fill" style="width: 92%;"></div>
+                                    </div>
+                                    <span>92%</span>
+                                </div>
+                            </div>
+                            <div class="mobile-route-status">
+                                <span class="mobile-status-badge">On Time</span>
+                                <span>16:20</span>
+                            </div>
+                        </div>
+
+                        <div class="mobile-route-card">
+                            <div class="mobile-route-indicator"></div>
+                            <div class="mobile-route-info">
+                                <div class="mobile-route-id">RT-00495</div>
+                                <div class="mobile-route-driver">T. Wagner • 10 stops</div>
+                                <div class="mobile-route-progress">
+                                    <div class="mobile-progress-mini">
+                                        <div class="mobile-progress-fill" style="width: 61%;"></div>
+                                    </div>
+                                    <span>61%</span>
+                                </div>
+                            </div>
+                            <div class="mobile-route-status">
+                                <span class="mobile-status-badge delayed">Optimizing</span>
+                                <span>18:00</span>
                             </div>
                         </div>
                     </div>
